@@ -1,0 +1,70 @@
+<header [ngClass]="{'home-header': isHomePage, 'inner-page-header': !isHomePage}">
+  <!-- Top Header Bar -->
+  <div class="top-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="header-left">
+          <button class="search-btn" [ngClass]="{'dark-text': !isHomePage}">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <div class="header-center">
+          <a routerLink="/" class="logo-link">
+            <!-- Different logo based on page type -->
+            <img *ngIf="isHomePage" src="/logo_home.png" alt="Travel Blog" class="logo">
+            <img *ngIf="!isHomePage" src="/logo-1.png" alt="Travel Blog" class="logo">
+          </a>
+        </div>
+
+        <div class="header-right">
+          <div class="social-links" [ngClass]="{'dark-text': !isHomePage}">
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav class="main-nav">
+    <div class="container">
+      <button class="menu-toggle" [ngClass]="{'dark-text': !isHomePage}" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-container" id="navbarContent">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'dark-text': !isHomePage}" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'dark-text': !isHomePage}" routerLink="/photography" routerLinkActive="active">PHOTOGRAPHY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'dark-text': !isHomePage}" routerLink="/sports" routerLinkActive="active">SPORTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'dark-text': !isHomePage}" routerLink="/travel" routerLinkActive="active">TRAVEL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'dark-text': !isHomePage}" routerLink="/business" routerLinkActive="active">BUSINESS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'dark-text': !isHomePage}" routerLink="/fashion" routerLinkActive="active">FASHION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'dark-text': !isHomePage}" routerLink="/features" routerLinkActive="active">FEATURES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'dark-text': !isHomePage}" routerLink="/contact" routerLinkActive="active">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
