@@ -87,15 +87,112 @@ div{
     opacity: 0.8;
   }
 
+  .post {
+    bottom: 0;
+    width: 85% ;
+    background: white;
+    margin: 20px;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .post:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .post img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+  }
+  
+  .hover-img {
+    opacity: 0; 
+  }
+  
+  .post-img-container:hover .hover-img {
+    opacity: 1; 
+  }
+  
+  .post-img-container:hover .post-img {
+    opacity: 0;
+  }
+  
+  .cat-links {
+      display: inline-block;
+      background: #7834ffbc;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 10px;
+  }
+  .cat-links1 {
+    display: inline-block;
+    background: pink;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.cat-links2 {
+  display: inline-block;
+  background: #7bdcb5;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.cat-links3 {
+  display: inline-block;
+  background: #00d084;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+  .post-title {
+      font-size: 110%;
+      font-weight: bold;
+      margin-top: 5px;
+      transition: color 0.3s ease-in-out;
+  }
+  
+  .post-title:hover {
+    color: #7d3cff; 
+  }
+  
+  .post-text {
+      font-size: 0.95em;
+      color: gray;
+      margin: 10px 0;
+  }
+  
+  .post-date {
+      font-size: 0.9em;
+      color: gray;
+  }
+
   .cont{
     width: 70%;
     height: auto;
     padding: 15px;
+    z-index: 999;
     background-color: rgb(253, 253, 253);
-    box-shadow: 10px 10px 5px rgb(57, 65, 65);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     padding-left: 10%;
     padding-right: 10%;
-    margin-top: -1%;
+    margin-top: 5px;
   }
 
 .cardT{
@@ -104,6 +201,17 @@ div{
     margin-bottom: 5%;
     background-color: aquamarine;
     font-weight: bold;
+}
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .post {
+      width: 100%;
+      margin-bottom: 15px;
+  }
 }
 .carTp{
     padding: 3%;
@@ -195,6 +303,12 @@ div{
     width: 50px;
     height: 50px;
     border-radius: 5px;
+    transition: all 1s;
+    overflow: hidden;
+  }
+  .recent-post-list img:hover{
+    transform: scale(1.1);
+
   }
   .post-info {
     font-size: 14px;
@@ -268,4 +382,64 @@ div{
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
+  }
+
+  
+  .image-wrapper img{
+    width: 70%;
+    
+  }
+  .image-wrapper {
+    position: relative;
+    width: 100%; /* or your image width */
+    height: 300px; /* or your image height */
+    margin-bottom:150px ;
+  }
+  @media only screen and (max-width:992px) {
+    .image-wrapper{
+      margin-bottom:0 ;
+    }
+ 
+  }
+  
+  .post-img-top,
+  .hover-img {
+    position: absolute;
+   /*  width: 100%;
+    height: 100%; */
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    object-fit: cover;
+  }
+  
+  .hover-img {
+    opacity: 0;
+  }
+  
+  .image-wrapper:hover .post-img-top {
+    opacity: 0;
+  }
+  
+  .image-wrapper:hover .hover-img {
+    opacity: 1;
+  }
+
+
+  
+  .image-wrapper-card img{
+    width: 100%;
+    
+  }
+  .image-wrapper-card {
+    position: relative;
+    width: 100%; /* or your image width */
+    height: 125px; /* or your image height */
+    margin-bottom: 70px;
+  }
+  .image-wrapper-card:hover .post-img-top {
+    opacity: 0;
+  }
+  
+  .image-wrapper-card:hover .hover-img {
+    opacity: 1;
   }

@@ -1,7 +1,8 @@
 <div class="hero-wrapper">
+  <app-header></app-header>
   <div class="image-container">
     <div class="overlay-text">
-        <span class="cat-links">
+        <span>
             <a href="#" rel="category tag" style="font-size: 150%;">Photography</a>
         </span>
         <hr>
@@ -21,28 +22,37 @@
       <div class="carousel-item active">
         <div class="card-wrapper container-sm d-flex  justify-content-around">
         <div class="card  " style="width: 18rem;">
-    <img src="travel-9-370x260.jpeg" class="card-img-top" alt="...">
+          <div class="image-wrapper-card">
+            <img class="card-img-top " src="travel-8-370x260.jpeg" alt="">
+            <img class="hover-img " src="travel-9-370x260.jpeg"  alt="Card image cap"/>
+        </div>
     <div class="card-body">
-      <a class="cardtit text-warning" style="margin-left: 40%;">Sports</a>
-      <p style="text-align: center;">The Santa Barabara Wildfire</p>
+      <a class="cardtit text-warning" style="font-size: 150%; margin-left: 40%;" routerLink="/sports" routerLinkActive="active">Sports</a>
+      <p style="text-align: center;" routerLink="/sports" routerLinkActive="active">The Santa Barabara Wildfire</p>
       <p style="text-align: center;">March 17,2017</p>
       
     </div>
   </div>
   <div class="card" style="width: 18rem;">
-    <img src="travel-12-370x260.jpeg" class="card-img-top" alt="...">
+    <div class="image-wrapper-card">
+      <img class="card-img-top " src="travel-blog-28-370x260.jpeg" alt="">
+      <img class="hover-img " src="travel-12-370x260.jpeg"  alt="Card image cap"/>
+  </div>
     <div class="card-body">
-      <a class="cardtit text-warning" style="margin-left: 40%;">Fashion</a>
-      <p style="text-align: center;">Totes and Tarragon</p>
+      <a class="cardtit text-warning" style="font-size: 150%; margin-left: 35%;" routerLink="/fashion" routerLinkActive="active">Fashion</a>
+      <p style="text-align: center;" routerLink="/fashion" routerLinkActive="active">Totes and Tarragon</p>
       <p style="text-align: center;">March 16,2017</p>
       
     </div>
           </div>
           <div class="card" style="width: 18rem;">
-    <img src="travel-blog-25-370x260.jpeg" class="card-img-top" alt="...">
+            <div class="image-wrapper-card">
+              <img class="card-img-top " src="travel-blog-21.jpg" alt="">
+              <img class="hover-img " src="travel-blog-25-370x260.jpeg"  alt="Card image cap"/>
+          </div>
     <div class="card-body">
-      <a class="cardtit text-primary" href="#" style="margin-left: 40%;">Travel</a>
-      <p style="text-align: center;">The travel mystery revealed</p>
+      <a class="cardtit text-primary" href="#" style="font-size: 150%; margin-left: 40%;"routerLink="/travel" routerLinkActive="active">Travel</a>
+      <p style="text-align: center;"routerLink="/travel" routerLinkActive="active">The travel mystery revealed</p>
       <p style="text-align: center;">March 2,2017</p>
       
     </div>
@@ -52,10 +62,13 @@
       <div class="carousel-item">
         <div class="card-wrapper container-sm d-flex   justify-content-around">
         <div class="card  " style="width: 18rem;">
-    <img src="travel-4-370x260.jpeg" class="card-img-top" alt="...">
+          <div class="image-wrapper-card">
+            <img class="card-img-top " src="travel-2-370x260.jpeg" alt="">
+            <img class="hover-img " src="travel-4-370x260.jpeg"  alt="Card image cap"/>
+        </div>
     <div class="card-body">
-      <a class="cardtit text-warning" style="margin-left: 35%;">Photography</a>
-      <p style="text-align: center;">Love advice from experts</p>
+      <a class="cardtit text-warning" style="font-size: 150%; margin-left: 25%;"routerLink="/photography" routerLinkActive="active">Photography</a>
+      <p style="text-align: center;"routerLink="/photography" routerLinkActive="active">Love advice from experts</p>
       <p style="text-align: center;">February 21,2017</p>
     </div>
   
@@ -78,20 +91,22 @@
 <div class="d-flex">
      <div class="slider-card container" style="margin-top: -2%;">
     
-      
      
      <div class="main-content">
         <div class="container">
-            <img class="home-image" src="travel-12.jpeg" alt="">
+          <div class="image-wrapper">
+            <img class="card-img-top " src="travel-blog-29.jpeg" alt="">
+            <img class="hover-img " src="travel-12.jpeg"  alt="Card image cap"/>
+        </div>
 
-            <div class="entry-content">
-                <span class="cat-links text-dark" style="margin-left: 25%;">Travel</span>
+            <div class="entry-content" style="margin-top: -3%;">
+                <span class="cat-links text-dark" style="margin-left: 25%;"><a routerLink="/travel" routerLinkActive="active" style="text-decoration: none;" class="text-light">Travel</a></span>
                 <div class="cont" style="background-color: white;">
-                    <h4 class="text-dark" style="align-content: center;">Best 50 tips for travel</h4>
-                    <p style="align-content: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
+                    <h4 class="text-dark" style="margin-left: 20%; align-content: center;">Best 50 tips for travel</h4>
+                    <p style=" margin-left: -10%; font-size: 100%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
                     
-                    <p class="d-flex">March 27, 2017 | By physcode | </p> 
-                    <div class="d-flex">
+                    <p class="d-flex" style="margin-left: 20%">March 27, 2017 | By physcode | </p> 
+                    <div class="d-flex" style="margin-left: 30%">
                         <a routerLink="/facebook" class="text-dark mx-2"><i class="fab fa-facebook"></i></a>
                         <a routerLink="/twitter" class="text-dark mx-2"><i class="fab fa-twitter"></i></a>
                         <a routerLink="/instagram" class="text-dark mx-2"><i class="fa-brands fa-pinterest"></i></a>
@@ -101,87 +116,108 @@
             </div>
 
             <div style="display: block;">
-                <div style="display: flex;">
+              <div style="display: flex; margin-top: -2%;">
 
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="travel-blog-25.jpeg" alt="Card image cap">
-                        <div>
-                            <span class="cat-links text-dark cardT">Travel</span>
-                          <h5 class="card-title" style="font-size: 110%; text-align: center;">The travel mystery revealed</h5>
-                           <p class="card-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
-                            <p style="text-align: center;">March 2, 2017</p>
-                        </div>
-                      </div>
-                      <div style="width: 5%;"></div>
-                      <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="travel-13.jpeg" alt="Card image cap">
-                        <div>
-                            <span class="cat-links text-dark carTp">Sports</span>
-                          <h5 class="card-title" style="font-size: 110%; text-align: center;">A Perfect Day in the Nature</h5>
-                          <p class="card-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
-                          <p style="text-align: center;">February 27, 2017</p>
-                        </div>
-                      </div>
+                <div class="post" style="width: 30%; position: relative;">
+
+                  <div class="image-wrapper-card">
+                    <img class="card-img-top " src="travel-8.jpg" alt="">
+                    <img class="hover-img " src="travel-9.jpeg"  alt="Card image cap"/>
                 </div>
+                    <div style="margin-top: -15%;">
+                        <span class="cat-links1 text-light" style="opacity: 0.6; margin-bottom: 5%;">Sports</span>
+                      <h5 class="post-title" style="font-size: 150%; text-align: center;" routerLink="/sports" routerLinkActive="active">The Santa Barbara Wildfire</h5>
+                       <p class="post-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
+                        <p style="text-align: center;">March 17, 2017</p>
+                    </div>
+                  </div>
+
+                  <div class="post" style="width: 30%; position: relative;">
+                    <div class="image-wrapper-card">
+                      <img class="card-img-top " src="travel-blog-28-370x260.jpeg" alt="">
+                      <img class="hover-img " src="travel-12.jpeg"  alt="Card image cap"/>
+                  </div>
+              
+                    <div style="margin-top: -15%;">
+                        <span class="cat-links text-light" style="opacity: 0.6; margin-bottom: 5%;">Fashion</span>
+                      <h5 class="post-title" style="font-size: 150%; text-align: center;" routerLink="/fashion" routerLinkActive="active">Totes and Tarragon</h5>
+                      <p class="post-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
+                      <p style="text-align: center;">March 16, 2017</p>
+                    </div>
+                  </div>
+            </div>
 
                 
-                <div style="display: flex; margin-top: 2%;">
+            <div style="display: flex; margin-top: -2%;">
 
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="travel-9.jpeg" alt="Card image cap">
-                        <div>
-                            <span class="cat-links text-dark carTp">Sports</span>
-                          <h5 class="card-title" style="font-size: 110%; text-align: center;">The travel mystery revealed</h5>
-                           <p class="card-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
-                            <p style="text-align: center;">March 17, 2017</p>
-                        </div>
-                      </div>
-                      <div style="width: 5%;"></div>
-                      <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="travel-12.jpeg" alt="Card image cap">
-                        <div>
-                            <span class="cat-links text-dark carTpp">Fashion</span>
-                          <h5 class="card-title" style="font-size: 110%; text-align: center;">A Perfect Day in the Nature</h5>
-                          <p class="card-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
-                          <p style="text-align: center;">February 27, 2017</p>
-                        </div>
-                      </div>
+              <div class="post" style="width: 30%; position: relative;">
+                <div class="image-wrapper-card">
+                  <img class="card-img-top " src="travel-blog-21.jpg" alt="">
+                  <img class="hover-img " src="travel-blog-25.jpeg"  alt="Card image cap"/>
+              </div>
+            
+                
+                  <div style="margin-top: -15%;">
+                      <span class="cat-links2 text-light" style="opacity: 0.6; margin-bottom: 5%;">Travel</span>
+                    <h5 class="post-title" style="font-size: 150%; text-align: center;" routerLink="/travel" routerLinkActive="active">The travel mystery revealed</h5>
+                     <p class="post-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
+                      <p style="text-align: center;">March 2, 2017</p>
+                  </div>
                 </div>
 
-                <div style="display: flex; margin-top: 2%;">
-
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="travel-blog-24.jpeg" alt="Card image cap">
-                        <div>
-                            <span class="cat-links text-dark cardT">Travel</span>
-                            <div style="padding: 2%;">
-                                <h5 class="card-title" style="font-size: 110%; text-align: center;">Easy ways to make travel faster</h5>
-                           <p class="card-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
-                            <p style="text-align: center;">February 25, 2017</p>
-                            </div>
-                          
-                        </div>
-                      </div>
-                      <div style="width: 5%;"></div>
-                      <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="travel-4.jpeg" alt="Card image cap">
-                        <div>
-                            <span class="cat-links text-dark carTpp">Photography</span>
-                            <div style="padding-left: 2%; padding-right: 2%;">
-                                <h5 class="card-title" style="font-size: 110%; text-align: center;">Love advice from experts</h5>
-                          <p class="card-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
-                          <p style="text-align: center;">February 21, 2017</p>
-                            </div>
-                        </div>
-                      </div>
+                <div class="post" style="width: 30%; position: relative;">
+                  <div class="image-wrapper-card">
+                    <img class="card-img-top " src="travel-9.jpeg" alt="">
+                    <img class="hover-img " src="travel-13.jpeg"  alt="Card image cap"/>
                 </div>
+                  
+                  <div style="margin-top: -15%;">
+                      <span class="cat-links1 text-light" style="opacity: 0.6; margin-bottom: 5%;">Sports</span>
+                    <h5 class="post-title" style="font-size: 150%; text-align: center;" routerLink="/sports" routerLinkActive="active">A Perfect Day in the Nature</h5>
+                    <p class="post-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
+                    <p style="text-align: center;">January 2, 2017</p>
+                  </div>
+                </div>
+          </div>
+
+          <div style="display: flex; margin-top: -4%;">
+
+            <div class="post" style="width: 30%; position: relative;">
+
+              <div class="image-wrapper-card">
+                <img class="card-img-top " src="travel-blog-23-768x486.jpeg" alt="">
+                <img class="hover-img " src="travel-blog-24.jpeg"  alt="Card image cap"/>
+            </div>
+                <div style="margin-top: -15%;">
+                    <span class="cat-links2 text-light" style="opacity: 0.6; margin-bottom: 5%;"> Travel</span>
+                  <h5 class="post-title" style="font-size: 150%; text-align: center;" routerLink="/travel" routerLinkActive="active">Easy ways to make travel faster</h5>
+                   <p class="post-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
+                    <p style="text-align: center;">February 25, 2017</p>
+                </div>
+              </div>
+
+              <div class="post" style="width: 30%; position: relative;">
+                <div class="image-wrapper-card">
+                  <img class="card-img-top " src="travel-2.jpg" alt="">
+                  <img class="hover-img " src="travel-4.jpeg"  alt="Card image cap"/>
+              </div>
+                <div style="margin-top: -15%;">
+                    <span class="cat-links3 text-light" style="opacity: 0.6; margin-bottom: 5%;">Photography</span>
+                  <h5 class="post-title" style="font-size: 150%; text-align: center;" routerLink="/photography" routerLinkActive="active">Love advice from experts</h5>
+                  <p class="post-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
+                  <p style="text-align: center;">February 21, 2017</p>
+                </div>
+              </div>
+        </div>
                 
             </div>
 
         </div>
      </div>
 </div>
+
 <div style="margin: -15%;"></div>
+
 <div class="sidebar">
     <!-- about -->
     <div class="about-box">
