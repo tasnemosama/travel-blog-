@@ -7,6 +7,7 @@
                 <div class="post-thumbnail">
                     <a [routerLink]="['/post', featuredPost.id]">
                         <img src="/travel-2.jpeg" [alt]="featuredPost.title" loading="lazy">
+                        <img src="/travel-4.jpeg" class="hover-img" alt="Fashion Outfit">
                         <span class="category-tag">Photography</span>
                     </a>
                 </div>
@@ -33,6 +34,7 @@
                     <div class="post-thumbnail">
                         <a [routerLink]="['/post', posts[0].id]">
                             <img src="/travel-1.jpg" [alt]="posts[0].title" loading="lazy">
+                            <img src="/travel-3.jpeg" class="hover-img" alt="Fashion Outfit">
                             <span class="category-tag">Photography</span>
                         </a>
                     </div>
@@ -50,6 +52,7 @@
                     <div class="post-thumbnail">
                         <a [routerLink]="['/post', posts[1].id]">
                             <img src="/travel-5.jpeg" [alt]="posts[1].title" loading="lazy">
+                            <img src="/banner-travel.jpeg" class="hover-img" alt="Fashion Outfit">
                             <span class="category-tag">Photography</span>
                         </a>
                     </div>
@@ -63,20 +66,28 @@
                 </div>
             </div>
             
-            <!-- Third post -->
-            <div class="post-card single-card">
-                <div class="post-thumbnail">
-                    <a [routerLink]="['/post', posts[2].id]">
-                        <img src="/travel-4.jpeg" [alt]="posts[2].title" loading="lazy">
-                        <span class="category-tag">Photography</span>
-                    </a>
-                </div>
-                <div class="post-content text-center">
-                    <h3 class="post-title"><a [routerLink]="['/post', posts[2].id]">{{ posts[2].title }}</a></h3>
-                    <p class="post-excerpt">{{ posts[2].excerpt }}</p>
-                    <div class="post-meta">
-                        <span class="post-date">{{ posts[2].date }}</span>
+            <!-- Third post - Change from single-card to match the others -->
+            <div class="post-columns">
+                <div class="post-card">
+                    <div class="post-thumbnail">
+                        <a [routerLink]="['/post', posts[2].id]">
+                            <img src="/travel-4.jpeg" [alt]="posts[2].title" loading="lazy">
+                            <img src="\sportblog1.jpeg" class="hover-img" alt="Fashion Outfit">
+                            <span class="category-tag">Photography</span>
+                        </a>
                     </div>
+                    <div class="post-content text-center">
+                        <h3 class="post-title"><a [routerLink]="['/post', posts[2].id]">{{ posts[2].title }}</a></h3>
+                        <p class="post-excerpt">{{ posts[2].excerpt }}</p>
+                        <div class="post-meta">
+                            <span class="post-date">{{ posts[2].date }}</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add an empty card to maintain the grid layout if needed -->
+                <div class="post-card" style="visibility: hidden;">
+                    <!-- Empty card to maintain grid layout -->
                 </div>
             </div>
         </div>

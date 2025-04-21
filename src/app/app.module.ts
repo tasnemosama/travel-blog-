@@ -11,19 +11,19 @@ import { BusinessComponent } from './pages/business/business.component';
 import { FashionComponent } from './pages/fashion/fashion.component';
 import { FeaturesComponent } from './pages/features/features.component';
 import { RouterModule } from '@angular/router';
-// Change this line if needed
-import { ContactComponent } from './pages/contact/contact.component'; // lowercase 'contact'
+import { PostDetailComponent } from './pages/post-detail/post-detail.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { TravelComponent } from './pages/travel/travel.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SportsComponent,
+    // SportsComponent removed from here since it's standalone
     BusinessComponent,
-    FashionComponent,
-    // ContactComponent removed from here
-    FeaturesComponent
+    FeaturesComponent,
+    SportsComponent // Added here as import since it's a standalone component
   ],
   imports: [
     BrowserModule,
@@ -33,7 +33,9 @@ import { TravelComponent } from './pages/travel/travel.component';
     TravelComponent,
     HeaderComponent,
     PhotographyComponent,
-    ContactComponent // Added here as import
+    ContactComponent,
+    PostDetailComponent,
+    FashionComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

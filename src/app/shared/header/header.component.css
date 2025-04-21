@@ -14,7 +14,6 @@ header {
   background-color: white; /* White background for inner pages */
   color: black;
   position: relative;
-  margin-bottom: 60px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add subtle shadow */
 }
 

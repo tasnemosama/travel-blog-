@@ -20,12 +20,14 @@ export class PhotographyComponent implements OnInit {
     author: 'John Doe'
   };
 
+  // In your component where you define the posts
   posts = [
     {
-      id: '2',
-      title: 'World\'s hottest destinations for vegans',
+      id: 1,
+      title: "World’s hottest destinations for vegans",
       excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus ac lacus.',
-      image: 'assets/images/photography-1.jpg',
+      image: "/assets/images/photo1.jpg",
+      hoverImage: "/assets/images/photo1-hover.jpg", // Add this alternate image
       category: 'Photography',
       date: 'February 19, 2017'
     },
