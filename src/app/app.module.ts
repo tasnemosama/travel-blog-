@@ -20,10 +20,9 @@ import { TravelComponent } from './pages/travel/travel.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    // SportsComponent removed from here since it's standalone
     BusinessComponent,
     FeaturesComponent,
-    SportsComponent // Added here as import since it's a standalone component
+    SportsComponent 
   ],
   imports: [
     BrowserModule,

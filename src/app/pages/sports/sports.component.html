@@ -1,105 +1,121 @@
-<div style="margin: 3%;"></div>
-<div class="d-flex">
-    <div class="slider-card container" style="margin-top: -2%;">
-
-
-
-        <div class="main-content">
-            <div class="container">
-                <img class="home-image" src="sportblog1.jpeg" alt="">
-
-                <div class="entry-content">
-                    <span class="cat-links text-dark" style="margin-left: 25%;">Sports</span>
-                    <div class="cont" style="background-color: white;">
-                        <h4 class="text-dark" style="align-content: center;">The Santa Barbara Wildfire</h4>
-                        <p style="align-content: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                            efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
-
-                        <p class="d-flex">March 27, 2017 | By physcode | </p>
-                        <div class="d-flex">
-                            <a routerLink="/facebook" class="text-dark mx-2"><i class="fab fa-facebook"></i></a>
-                            <a routerLink="/twitter" class="text-dark mx-2"><i class="fab fa-twitter"></i></a>
-                            <a routerLink="/instagram" class="text-dark mx-2"><i class="fa-brands fa-pinterest"></i></a>
-                            <a routerLink="/instagram" class="text-dark mx-2"><i class="fa-brands fa-linkedin"></i></a>
-                        </div>
+<div class="page-container">
+    <div class="main-content">
+        <div class="post-grid">
+            <!-- Featured Post -->
+            <div class="featured-post">
+                <div class="post-thumbnail">
+                    <a [routerLink]="['/post', '11']">
+                        <img src="travel-8.jpeg" alt="Totes and Tarragon" loading="lazy">
+                        <img src="sportblog1.jpeg" class="hover-img" alt="Totes and Tarragon">
+                        <span class="category-tag">Sport</span>
+                    </a>
+                </div>
+                <div class="post-content text-center">
+                    <h2 class="post-title"><a [routerLink]="['/post', '1']">The Santa Barbara Wildfire</a></h2>
+                    <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
+                    <div class="post-meta">
+                        <span class="post-date">March 17, 2017</span>
+                        <span class="post-author">| by <a href="#">physcode</a></span>
+                    </div>
+                    <div class="post-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-
-                <div style="display: block;">
-                    <div style="display: flex;">
-
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="sport2.jpeg" alt="Card image cap">
-                            <div>
-                                <span class="cat-links text-dark cardT">Sports</span>
-                                <h5 class="card-title" style="font-size: 110%; text-align: center;">A Perfect Day in the
-                                    Nature</h5>
-                                <p class="card-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu,
-                                    cursus […]</p>
-                                <p style="text-align: center;">February 27, 2017</p>
-                            </div>
-                        </div>
-                        <div style="width: 5%;"></div>
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="sport3.jpeg" alt="Card image cap">
-                            <div>
-                                <span class="cat-links text-dark carTp">Sports</span>
-                                <h5 class="card-title" style="font-size: 110%; text-align: center;">The Sun Is
-                                    Underappreciated</h5>
-                                <p class="card-text" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu,
-                                    cursus […]</p>
-                                <p style="text-align: center;">February 13, 2017</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div style="display: flex; margin-top: 2%;">
-
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="sport4.jpeg" alt="Card image cap">
-                            <div>
-                                <span class="cat-links text-dark cardT">Sports</span>
-                                <div style="padding: 2%;">
-                                    <h5 class="card-title" style="font-size: 110%; text-align: center;">The perfect
-                                        summer body</h5>
-                                    <p class="card-text" style="text-align: center;">Lorem ipsum dolor sit amet,
-                                        consectetur
-                                        adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus
-                                        eu,
-                                        cursus […]</p>
-                                    <p style="text-align: center;">January 14, 2017</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div style="width: 5%;"></div>
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="sport5.jpeg" alt="Card image cap">
-                            <div>
-                                <span class="cat-links text-dark carTpp">Sports</span>
-                                <div style="padding-left: 2%; padding-right: 2%;">
-                                    <h5 class="card-title" style="font-size: 110%; text-align: center;">You big profit
-                                    </h5>
-                                    <p class="card-text" style="text-align: center;">Lorem ipsum dolor sit amet,
-                                        consectetur
-                                        adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus
-                                        eu,
-                                        cursus […]</p>
-                                    <p style="text-align: center;">August 10, 2016</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
             </div>
+            
+            <!-- Post Grid - Two columns layout -->
+            <div class="post-columns">
+                <!-- First column -->
+                <div class="post-card">
+                    <div class="post-thumbnail">
+                        <a [routerLink]="['/post', '12']">
+                            <img src="sportblog1.jpeg" alt="Toots And The Price Tags" loading="lazy">
+                            <img src="sport2.jpeg" class="hover-img" alt="Toots And The Price Tags">
+                            <span class="category-tag">Sport</span>
+                        </a>
+                    </div>
+                    <div class="post-content text-center">
+                        <h3 class="post-title"><a [routerLink]="['/post', '2']">A Perfect Day in the Nature</a></h3>
+                        <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
+                        <div class="post-meta">
+                            <span class="post-date">February 27, 2017</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second column -->
+                <div class="post-card">
+                    <div class="post-thumbnail">
+                        <a [routerLink]="['/post', '13']">
+                            <img src="travel-6.jpg" alt="Paraded Glam" loading="lazy">
+                            <img src="sport3.jpeg" class="hover-img" alt="Paraded Glam">
+                            <span class="category-tag">Sport</span>
+                        </a>
+                    </div>
+                    <div class="post-content text-center">
+                        <h3 class="post-title"><a [routerLink]="['/post', '3']">The Sun Is Underappreciated</a></h3>
+                        <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
+                        <div class="post-meta">
+                            <span class="post-date">February 13, 2017</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second row of posts -->
+            <div class="post-columns">
+                <!-- Third post -->
+                <div class="post-card">
+                    <div class="post-thumbnail">
+                        <a [routerLink]="['/post', '14']">
+                            <img src="travel-3.jpeg" alt="Margiela & Macaron" loading="lazy">
+                            <img src="travel-4.jpeg" class="hover-img" alt="Margiela & Macaron">
+                            <span class="category-tag">Sport</span>
+                        </a>
+                    </div>
+                    <div class="post-content text-center">
+                        <h3 class="post-title"><a [routerLink]="['/post', '4']">The perfect summer body</a></h3>
+                        <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
+                        <div class="post-meta">
+                            <span class="post-date">January 14, 2017</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fourth post -->
+                <div class="post-card">
+                    <div class="post-thumbnail">
+                        <a [routerLink]="['/post', '15']">
+                            <img src="travel-12.jpeg" alt="Totes and Tarragon" loading="lazy">
+                            <img src="sport5.jpeg" class="hover-img" alt="Totes and Tarragon">
+                            <span class="category-tag">Sport</span>
+                        </a>
+                    </div>
+                    <div class="post-content text-center">
+                        <h2 class="post-title"><a [routerLink]="['/post', '5']">You big profit</a></h2>
+                        <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
+                        <div class="post-meta">
+                            <span class="post-date">August 10, 2016</span>
+                            <span class="post-author">| by <a href="#">physcode</a></span>
+                        </div>
+                        <div class="post-social">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
         </div>
     </div>
-    <div style="margin: -15%;"></div>
+    
+    <!-- Sidebar -->
     <div class="sidebar">
         <!-- about -->
         <div class="about-box">
@@ -113,13 +129,13 @@
                 </div>
             </div>
         </div>
+        
         <!-- facebook -->
-
-        <div class="facebook">
+        <div class="facebook-box">
             <h3>FIND US ON FACEBOOK</h3>
             <img src="/453866160_897256062440955_4985282045021696867_n.png" alt="Facebook Ad">
         </div>
-
+        
         <!-- recent-post -->
         <div class="recent-post-box">
             <h3 class="recent-post-title">RECENT POST</h3>
@@ -150,7 +166,8 @@
                 </li>
             </ul>
         </div>
-
+        
+        <!-- categories -->
         <div class="categories-box">
             <div class="categories-header">CATEGORIES</div>
             <ul class="categories-list">
@@ -162,14 +179,14 @@
                 <li>Uncategorized <span>(4)</span></li>
             </ul>
         </div>
-
-
+        
+        <!-- advertisement -->
         <div class="sidebar-box">
             <div class="ad-header">ADVERTISEMENT</div>
             <img src="\ad-sidebar.jpg" alt="Advertisement">
         </div>
-
-
+        
+        <!-- newsletter -->
         <div class="sidebar-box">
             <div class="newsletter-header">NEWSLETTER</div>
             <p>Subscribe to our newsletter</p>
