@@ -21,7 +21,6 @@ import { TravelComponent } from './pages/travel/travel.component';
     AppComponent,
     HomeComponent,
     BusinessComponent,
-    FeaturesComponent,
     SportsComponent 
   ],
   imports: [
@@ -31,6 +30,7 @@ import { TravelComponent } from './pages/travel/travel.component';
     FormsModule,
     TravelComponent,
     HeaderComponent,
+    FeaturesComponent,
     PhotographyComponent,
     ContactComponent,
     PostDetailComponent,

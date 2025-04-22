@@ -6,6 +6,11 @@ import { SportsComponent } from './pages/sports/sports.component';
 import { BusinessComponent } from './pages/business/business.component';
 import { FashionComponent } from './pages/fashion/fashion.component';
 import { FeaturesComponent } from './pages/features/features.component';
+import { StandardPostComponent } from './pages/features/standard-post/standard-post.component';
+import { GalleryPostComponent } from './pages/features/gallery-post/gallery-post.component';
+import { AudioPostComponent } from './pages/features/audio-post/audio-post.component';
+import { LinkPostComponent } from './pages/features/link-post/link-post.component';
+import { VideoPostComponent } from './pages/features/video-post/video-post.component';
 import { TravelComponent } from './pages/travel/travel.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
@@ -17,7 +22,13 @@ const routes: Routes = [
   { path: 'travel', component: TravelComponent },
   { path: 'business', component: BusinessComponent },
   { path: 'fashion', component: FashionComponent },
+  // Features routes
   { path: 'features', component: FeaturesComponent },
+  { path: 'features/standard', component: StandardPostComponent },
+  { path: 'features/gallery', component: GalleryPostComponent },
+  { path: 'features/audio', component: AudioPostComponent },
+  { path: 'features/link', component: LinkPostComponent },
+  { path: 'features/video', component: VideoPostComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'post/:id', component: PostDetailComponent },
   { path: '**', redirectTo: '' }

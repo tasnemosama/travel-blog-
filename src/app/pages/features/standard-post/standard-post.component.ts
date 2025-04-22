@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-features',
-  templateUrl: './features.component.html',
-  styleUrls: ['./features.component.css'],
+  selector: 'app-standard-post',
+  templateUrl: './standard-post.component.html',
+  styleUrls: ['./standard-post.component.css'],
   standalone: true,
   imports: [CommonModule, RouterModule]
 })
-export class FeaturesComponent implements OnInit {
+export class StandardPostComponent implements OnInit {
+  // Copy all properties and methods from features component
+  
   constructor() { }
 
   ngOnInit(): void {

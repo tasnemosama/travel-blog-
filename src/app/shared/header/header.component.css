@@ -55,11 +55,89 @@ header {
   width: auto; /* Changed from fixed width to auto to maintain aspect ratio */
 }
 
+/* Search button styles */
 .search-btn {
   background: transparent;
   border: none;
-  color: white;
-  font-size: 16px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.search-btn.dark-text {
+  color: #333;
+}
+
+/* Search overlay styles */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.search-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-container {
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+}
+
+.close-search {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.search-form {
+  text-align: center;
+}
+
+.search-form h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.search-form form {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.search-form input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  padding: 10px;
+  outline: none;
+}
+
+.search-form button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: #333;
   cursor: pointer;
 }
 
@@ -163,4 +241,55 @@ header {
   .nav-link {
     padding: 15px;
   }
+}
+
+
+/* Dropdown styles */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-toggle .fa-chevron-down {
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  min-width: 200px;
+  padding: 10px 0;
+  margin: 0;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+  color: #d65c8b;
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
 }
