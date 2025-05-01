@@ -1,0 +1,149 @@
+<div *ngIf="post" class="post-detail-container">
+  <div class="main-content">
+    <!-- Featured Image -->
+    <div class="post-featured-image">
+      <img [src]="post.image" [alt]="post.title">
+    </div>
+    
+    <!-- Post Header -->
+    <div class="post-header">
+      <h1 class="post-title">{{ post.title }}</h1>
+      <div class="post-meta">
+        <span class="post-date">{{ post.date }}</span>
+        <span class="post-author">| by <a href="#">{{ post.author }}</a></span>
+        <span class="post-category">| <a [routerLink]="['/', post.category.toLowerCase()]">{{ post.category }}</a></span>
+      </div>
+    </div>
+    
+    <!-- Social Share Buttons -->
+    <div class="social-share">
+      <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-icon pinterest"><i class="fab fa-pinterest-p"></i></a>
+      <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    
+    <!-- Post Content -->
+    <div class="post-content">
+      <p [innerHTML]="post.content"></p>
+      <div class="post-tags">
+        <span>A smile is a sign of friendliness</span>
+      </div>
+    </div>
+    
+    <!-- Author Box -->
+    <div class="author-box">
+      <div class="author-image">
+        <img [src]="post.authorImage" alt="Author">
+      </div>
+      <div class="author-info">
+        <h3>WRITTEN BY {{ post.author }}</h3>
+        <p>{{ post.authorBio }}</p>
+      </div>
+    </div>
+    
+    <!-- Related Posts -->
+    <div class="related-posts">
+      <h2>Related Posts</h2>
+      <div class="related-posts-grid">
+        <div class="related-post" *ngFor="let relatedPost of relatedPosts">
+          <div class="related-post-image">
+            <a [routerLink]="['/post', relatedPost.id]">
+              <img [src]="relatedPost.image" [alt]="relatedPost.title">
+            </a>
+            <div class="read-more-btn">
+              <a [routerLink]="['/post', relatedPost.id]">READ MORE</a>
+            </div>
+          </div>
+          <div class="related-post-content">
+            <h3><a [routerLink]="['/post', relatedPost.id]">{{ relatedPost.title }}</a></h3>
+            <p>{{ relatedPost.excerpt }}</p>
+            <div class="related-post-meta">
+              <span class="related-post-date">{{ relatedPost.date }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+   <!-- Sidebar -->
+   <div class="sidebar">
+    <!-- about -->
+    <div class="about-box">
+        <div class="about-header">ABOUT ME</div>
+        <div class="about-content">
+            <img src="/travel-12.jpeg" alt="About Me">
+            <div class="about-text">
+                <h2>Photographer &<br> Blogger</h2>
+                <p>Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu.</p>
+                <h3 class="blog-name">Travel Blog</h3>
+            </div>
+        </div>
+    </div>
+    
+    <!-- facebook -->
+    <div class="facebook-box">
+        <h3>FIND US ON FACEBOOK</h3>
+        <img src="/453866160_897256062440955_4985282045021696867_n.png" alt="Facebook Ad">
+    </div>
+    
+    <!-- recent-post -->
+    <div class="recent-post-box">
+        <h3 class="recent-post-title">RECENT POST</h3>
+        <ul class="recent-post-list">
+            <li>
+                <img src="travel-blog-29-150x150.jpeg" alt="Post 1">
+                <div class="post-info">
+                    <span class="post-category">TRAVEL</span>
+                    <p><strong>Best 50 tips for travel</strong></p>
+                    <p class="post-date">📅 March 27, 2017</p>
+                </div>
+            </li>
+            <li>
+                <img src="travel-8-150x150.jpeg" alt="Post 2">
+                <div class="post-info">
+                    <span class="post-category">SPORTS</span>
+                    <p><strong>The Santa Barbara Wildfire</strong></p>
+                    <p class="post-date">📅 March 17, 2017</p>
+                </div>
+            </li>
+            <li>
+                <img src="travel-blog-28-150x150.jpeg" alt="Post 3">
+                <div class="post-info">
+                    <span class="post-category">FASHION</span>
+                    <p><strong>Totes and Tarragon</strong></p>
+                    <p class="post-date">📅 March 16, 2017</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- categories -->
+    <div class="categories-box">
+        <div class="categories-header">CATEGORIES</div>
+        <ul class="categories-list">
+            <li>Business <span>(3)</span></li>
+            <li>Fashion <span>(6)</span></li>
+            <li>Photography <span>(4)</span></li>
+            <li>Sports <span>(5)</span></li>
+            <li>Travel <span>(6)</span></li>
+            <li>Uncategorized <span>(4)</span></li>
+        </ul>
+    </div>
+    
+    <!-- advertisement -->
+    <div class="sidebar-box">
+        <div class="ad-header">ADVERTISEMENT</div>
+        <img src="\ad-sidebar.jpg" alt="Advertisement">
+    </div>
+    
+    <!-- newsletter -->
+    <div class="sidebar-box">
+        <div class="newsletter-header">NEWSLETTER</div>
+        <p>Subscribe to our newsletter</p>
+        <input type="email" placeholder="Email Address">
+        <button>Sign Up Now</button>
+    </div>
+</div>
+</div>

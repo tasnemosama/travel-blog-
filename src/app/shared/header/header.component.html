@@ -1,0 +1,107 @@
+<header [ngClass]="{'home-header': isHomePage, 'inner-page-header': !isHomePage}">
+  <!-- Top Header Bar -->
+  <div class="top-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="header-left">
+          <button class="search-btn" [ngClass]="{'dark-text': !isHomePage}" (click)="toggleSearch()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <div class="header-center">
+          <a routerLink="/" class="logo-link">
+            <!-- Different logo based on page type -->
+            <img *ngIf="isHomePage" src="/logo_home.png" alt="Travel Blog" class="logo">
+            <img *ngIf="!isHomePage" src="/logo-1.png" alt="Travel Blog" class="logo">
+          </a>
+        </div>
+
+        <div class="header-right">
+          <div class="social-links" [ngClass]="{'dark-text': !isHomePage}">
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav class="main-nav">
+    <div class="container">
+      <button class="menu-toggle" [ngClass]="{'dark-text': !isHomePage}" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-container" id="navbarContent">
+        <ul class="nav-menu">
+          <!-- Home dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" [ngClass]="{'dark-text': !isHomePage}" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              HOME
+            </a>
+            <ul class="dropdown-menu">
+              <li><a routerLink="/home/list-layout">List Layout</a></li>
+              <li><a routerLink="/home/grid-layout">Grid Layout</a></li>
+              <li><a routerLink="/home/grid-no-sidebar">Grid No Sidebar</a></li>
+              <li><a routerLink="/home/boxed-layout">Boxed Layout</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'dark-text': !isHomePage}" routerLink="/photography" routerLinkActive="active">PHOTOGRAPHY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'dark-text': !isHomePage}" routerLink="/sports" routerLinkActive="active">SPORTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'dark-text': !isHomePage}" routerLink="/travel" routerLinkActive="active">TRAVEL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'dark-text': !isHomePage}" routerLink="/business" routerLinkActive="active">BUSINESS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'dark-text': !isHomePage}" routerLink="/fashion" routerLinkActive="active">FASHION</a>
+          </li>
+          <!-- Features dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" [ngClass]="{'dark-text': !isHomePage}" routerLink="/features" routerLinkActive="active">
+              FEATURES 
+            </a>
+            <ul class="dropdown-menu">
+              <li><a routerLink="/features/standard">Post Format: Standard</a></li>
+              <li><a routerLink="/features/gallery">Post Format: Gallery</a></li>
+              <li><a routerLink="/features/audio">Post Format: Audio</a></li>
+              <li><a routerLink="/features/link">Post Format: Link</a></li>
+              <li><a routerLink="/features/video">Post Format: Video</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'dark-text': !isHomePage}" routerLink="/contact" routerLinkActive="active">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Search Overlay -->
+<div class="search-overlay" [ngClass]="{'active': isSearchActive}">
+  <div class="search-container">
+    <button class="close-search" (click)="toggleSearch()">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="search-form">
+      <h3>Search</h3>
+      <form (submit)="submitSearch($event)">
+        <input type="text" [(ngModel)]="searchQuery" name="search" placeholder="Type and hit enter..." autocomplete="off">
+        <button type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

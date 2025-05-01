@@ -1,0 +1,176 @@
+
+<div class="page-container">
+    <div class="main-content">
+        <div class="post-grid">
+            <!-- Featured Post -->
+            <div class="featured-post">
+                <div class="post-thumbnail">
+                    <a [routerLink]="['/post', featuredPost.id]">
+                        <img src="/travel-2.jpg" [alt]="featuredPost.title" loading="lazy">
+                        <img src="/travel-4.jpeg" class="hover-img" alt="Fashion Outfit">
+                        <span class="category-tag">Photography</span>
+                    </a>
+                </div>
+                <div class="post-content text-center">
+                    <h2 class="post-title"><a [routerLink]="['/post', featuredPost.id]">{{ featuredPost.title }}</a></h2>
+                    <p class="post-excerpt">{{ featuredPost.excerpt }}</p>
+                    <div class="post-meta">
+                        <span class="post-date">{{ featuredPost.date }}</span>
+                        <span class="post-author">| by <a href="#">{{ featuredPost.author }}</a></span>
+                    </div>
+                    <div class="post-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Post Grid - Two columns layout -->
+            <div class="post-columns">
+                <!-- First column -->
+                <div class="post-card">
+                    <div class="post-thumbnail">
+                        <a [routerLink]="['/post', posts[0].id]">
+                            <img src="/travel-1.jpg" [alt]="posts[0].title" loading="lazy">
+                            <img src="/travel-3.jpeg" class="hover-img" alt="Fashion Outfit">
+                            <span class="category-tag">Photography</span>
+                        </a>
+                    </div>
+                    <div class="post-content text-center">
+                        <h3 class="post-title"><a [routerLink]="['/post', posts[0].id]">{{ posts[0].title }}</a></h3>
+                        <p class="post-excerpt">{{ posts[0].excerpt }}</p>
+                        <div class="post-meta">
+                            <span class="post-date">{{ posts[0].date }}</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second column -->
+                <div class="post-card">
+                    <div class="post-thumbnail">
+                        <a [routerLink]="['/post', posts[1].id]">
+                            <img src="/travel-5.jpeg" [alt]="posts[1].title" loading="lazy">
+                            <img src="/banner-travel.jpeg" class="hover-img" alt="Fashion Outfit">
+                            <span class="category-tag">Photography</span>
+                        </a>
+                    </div>
+                    <div class="post-content text-center">
+                        <h3 class="post-title"><a [routerLink]="['/post', posts[1].id]">{{ posts[1].title }}</a></h3>
+                        <p class="post-excerpt">{{ posts[1].excerpt }}</p>
+                        <div class="post-meta">
+                            <span class="post-date">{{ posts[1].date }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Third post - Change from single-card to match the others -->
+            <div class="post-columns">
+                <div class="post-card">
+                    <div class="post-thumbnail">
+                        <a [routerLink]="['/post', posts[2].id]">
+                            <img src="/travel-4.jpeg" [alt]="posts[2].title" loading="lazy">
+                            <img src="\sportblog1.jpeg" class="hover-img" alt="Fashion Outfit">
+                            <span class="category-tag">Photography</span>
+                        </a>
+                    </div>
+                    <div class="post-content text-center">
+                        <h3 class="post-title"><a [routerLink]="['/post', posts[2].id]">{{ posts[2].title }}</a></h3>
+                        <p class="post-excerpt">{{ posts[2].excerpt }}</p>
+                        <div class="post-meta">
+                            <span class="post-date">{{ posts[2].date }}</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add an empty card to maintain the grid layout if needed -->
+                <div class="post-card" style="visibility: hidden;">
+                    <!-- Empty card to maintain grid layout -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ <!-- Sidebar -->
+ <div class="sidebar">
+    <!-- about -->
+    <div class="about-box">
+        <div class="about-header">ABOUT ME</div>
+        <div class="about-content">
+            <img src="/travel-12.jpeg" alt="About Me">
+            <div class="about-text">
+                <h2>Photographer &<br> Blogger</h2>
+                <p>Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu.</p>
+                <h3 class="blog-name">Travel Blog</h3>
+            </div>
+        </div>
+    </div>
+    <!-- facebook -->
+   
+    <div class="facebook">
+        <h3>FIND US ON FACEBOOK</h3>
+        <img src="/453866160_897256062440955_4985282045021696867_n.png" alt="Facebook Ad">
+    </div>
+ 
+    <!-- recent-post -->
+    <div class="recent-post-box">
+        <h3 class="recent-post-title">RECENT POST</h3>
+        <ul class="recent-post-list">
+            <li>
+                <img src="travel-blog-29-150x150.jpeg" alt="Post 1">
+                <div class="post-info">
+                    <span class="post-category">TRAVEL</span>
+                    <p><strong>Best 50 tips for travel</strong></p>
+                    <p class="post-date">📅 March 27, 2017</p>
+                </div>
+            </li>
+            <li>
+                <img src="travel-8-150x150.jpeg" alt="Post 2">
+                <div class="post-info">
+                    <span class="post-category">SPORTS</span>
+                    <p><strong>The Santa Barbara Wildfire</strong></p>
+                    <p class="post-date">📅 March 17, 2017</p>
+                </div>
+            </li>
+            <li>
+                <img src="travel-blog-28-150x150.jpeg" alt="Post 3">
+                <div class="post-info">
+                    <span class="post-category">FASHION</span>
+                    <p><strong>Totes and Tarragon</strong></p>
+                    <p class="post-date">📅 March 16, 2017</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+ 
+    <!-- categories -->
+    <div class="categories-box">
+        <div class="categories-header">CATEGORIES</div>
+        <ul class="categories-list">
+            <li>Business <span>(3)</span></li>
+            <li>Fashion <span>(6)</span></li>
+            <li>Photography <span>(4)</span></li>
+            <li>Sports <span>(5)</span></li>
+            <li>Travel <span>(6)</span></li>
+            <li>Uncategorized <span>(4)</span></li>
+        </ul>
+    </div>
+ 
+ 
+    <div class="sidebar-box">
+        <div class="ad-header">ADVERTISEMENT</div>
+        <img src="\ad-sidebar.jpg" alt="Advertisement">
+    </div>
+ 
+ 
+    <div class="sidebar-box">
+        <div class="newsletter-header">NEWSLETTER</div>
+        <p>Subscribe to our newsletter</p>
+        <input type="email" placeholder="Email Address">
+        <button>Sign Up Now</button>
+    </div>
+ </div>
+ </div>
+ 
