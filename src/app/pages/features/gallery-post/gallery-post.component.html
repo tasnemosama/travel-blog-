@@ -1,0 +1,186 @@
+<div class="page-container">
+  <div class="main-content">
+    <div class="gallery-post-container">
+      <!-- Main Gallery Post -->
+      <div class="gallery-post">
+        <!-- Gallery Image Slider -->
+        <div class="gallery-slider">
+          <button class="slider-nav prev" (click)="prevImage()"><i class="fas fa-chevron-left"></i></button>
+          <div class="slider-image">
+            <img [src]="galleryImages[currentImageIndex]" [alt]="'Gallery image ' + (currentImageIndex + 1)">
+            <!-- <div class="slider-indicator">
+              <span>{{currentImageIndex + 1}}/{{galleryImages.length}}</span>
+            </div> -->
+          </div>
+          <button class="slider-nav next" (click)="nextImage()"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <!-- Post Header -->
+        <div class="post-header text-center">
+          <h1 class="post-title">Post Format: Gallery</h1>
+          <div class="post-meta">
+            <span class="post-date">January 5, 2016</span>
+            <span class="post-separator">|</span>
+            <span class="post-author">By <a href="#">physcode</a></span>
+            <span class="post-separator">|</span>
+            <span class="post-category">Posted in <a href="#">Uncategorized</a></span>
+          </div>
+        </div>
+        
+        <!-- Post Content -->
+        <div class="post-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus ac lacus. Ut sodales semper ante, at malesuada neque vestibulum vitae. Pellentesque luctus ipsum sit amet ligula facilisis rutrum. Nulla facilisi. Morbi rutrum nisi elementum urna faucibus, et porta elit lobortis. Donec imperdiet tristique tellus, ut consectetur ipsum tempus vitae. Nunc sagittis sem a leo rutrum, et lobortis purus rhoncus. Aliquam ipsum metus, ullamcorper quis dapibus ac, ullamcorper ac magna. Nulla faucibus, risus eu molestie fermentum, lectus elit tincidunt turpis, at dictum magna mauris sit amet lectus. Fusce malesuada rhoncus ultricies. In interdum, odio et dapibus interdum, turpis arcu gravida odio, quis bibendum est dui et magna. In posuere eget magna eget lacinia. Maecenas efficitur sollicitudin fermentum.
+
+            Vivamus nec mattis ipsum. Nam fringilla laoreet dolor. Aliquam lacus nisl, viverra ac convallis sit amet, fermentum vitae magna. Phasellus tristique risus non ipsum porttitor maximus. Vestibulum tincidunt elit ac posuere viverra. Curabitur facilisis, libero at vestibulum commodo, est odio sagittis augue, non varius ligula nibh a ex. In lorem velit, commodo a massa eget, sagittis dapibus risus.
+            
+            Integer et quam feugiat felis pellentesque porttitor nec quis purus. Mauris nisi ex, vulputate ut leo eget, convallis consequat ligula. Aliquam non tortor in ante euismod mollis sit amet non nisl. Quisque sagittis varius est in commodo. In semper ligula quam, id tempor orci tristique eu. Donec at bibendum lorem. Cras quis mi scelerisque enim euismod accumsan. Aliquam diam purus, porta id mattis et, commodo vel nisl. Suspendisse eu quam suscipit, euismod erat eget, dignissim sem. Aenean id sem et odio auctor laoreet sed id odio. Suspendisse ut arcu tempor, gravida justo nec, pellentesque ipsum. Nam dictum mi nunc, quis aliquet eros ullamcorper sed. Aliquam id nulla non ex efficitur aliquam. Suspendisse eu nunc sit amet est fringilla lobortis bibendum iaculis ante. Proin varius, lorem ac lobortis dictum, mauris diam eleifend metus, eu semper urna ante at libero.</p>
+          
+        </div>
+        
+        <!-- Post Footer -->
+        <div class="post-footer">
+          <div class="post-tags">
+            <span>Post Format: Gallery</span>
+          </div>
+          <div class="post-share">
+            <span>Share: </span>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <!-- Author Info -->
+        <div class="author-info">
+          <div class="author-avatar">
+            <img src="auther.jpeg" alt="Author Avatar">
+          </div>
+          <div class="author-details">
+            <h4>WRITTEN BY PHYSCODE</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus.</p>
+            
+        </div>
+        </div>
+        
+        <!-- Related Posts -->
+        <div class="related-posts">
+          <h3>Related Posts</h3>
+          <div class="related-posts-grid">
+            <!-- Audio Post -->
+            <div class="related-post">
+              <a routerLink="/features/audio">
+                <div class="post-thumbnail audio-thumbnail">
+                  <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" 
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/280186218&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true"></iframe>
+                  
+                </div>
+                <div class="post-category">Uncategorized</div>
+                <h4 class="post-title">Post Format: Audio</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu, cursus […]</p>
+                <div class="post-meta">
+                    <span class="post-date">January 5, 2016</span>
+                </div>
+
+              </a>
+            </div>
+            
+            <!-- Standard Post -->
+            <div class="related-post">
+              <a routerLink="/features/standard">
+                <div class="post-thumbnail">
+                  <img src="travel-blog-32.jpg" alt="Standard Post">
+                </div>
+                <div class="post-category">Uncategorized</div>
+                <h4 class="post-title">Physcode</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non augue, tempor et faucibus eu, cursus</p>
+                <div class="post-meta">
+                    <span class="post-date">February 13, 2017</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Sidebar -->
+   <div class="sidebar">
+    <!-- about -->
+    <div class="about-box">
+        <div class="about-header">ABOUT ME</div>
+        <div class="about-content">
+            <img src="/travel-12.jpeg" alt="About Me">
+            <div class="about-text">
+                <h2>Photographer &<br> Blogger</h2>
+                <p>Nam efficitur egestas risus. Sed eros augue, tempor et faucibus eu.</p>
+                <h3 class="blog-name">Travel Blog</h3>
+            </div>
+        </div>
+    </div>
+    
+    <!-- facebook -->
+    <div class="facebook-box">
+        <h3>FIND US ON FACEBOOK</h3>
+        <img src="/453866160_897256062440955_4985282045021696867_n.png" alt="Facebook Ad">
+    </div>
+    
+    <!-- recent-post -->
+    <div class="recent-post-box">
+        <h3 class="recent-post-title">RECENT POST</h3>
+        <ul class="recent-post-list">
+            <li>
+                <img src="travel-blog-29-150x150.jpeg" alt="Post 1">
+                <div class="post-info">
+                    <span class="post-category">TRAVEL</span>
+                    <p><strong>Best 50 tips for travel</strong></p>
+                    <p class="post-date">📅 March 27, 2017</p>
+                </div>
+            </li>
+            <li>
+                <img src="travel-8-150x150.jpeg" alt="Post 2">
+                <div class="post-info">
+                    <span class="post-category">SPORTS</span>
+                    <p><strong>The Santa Barbara Wildfire</strong></p>
+                    <p class="post-date">📅 March 17, 2017</p>
+                </div>
+            </li>
+            <li>
+                <img src="travel-blog-28-150x150.jpeg" alt="Post 3">
+                <div class="post-info">
+                    <span class="post-category">FASHION</span>
+                    <p><strong>Totes and Tarragon</strong></p>
+                    <p class="post-date">📅 March 16, 2017</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- categories -->
+    <div class="categories-box">
+        <div class="categories-header">CATEGORIES</div>
+        <ul class="categories-list">
+            <li>Business <span>(3)</span></li>
+            <li>Fashion <span>(6)</span></li>
+            <li>Photography <span>(4)</span></li>
+            <li>Sports <span>(5)</span></li>
+            <li>Travel <span>(6)</span></li>
+            <li>Uncategorized <span>(4)</span></li>
+        </ul>
+    </div>
+    
+    <!-- advertisement -->
+    <div class="sidebar-box">
+        <div class="ad-header">ADVERTISEMENT</div>
+        <img src="\ad-sidebar.jpg" alt="Advertisement">
+    </div>
+    
+    <!-- newsletter -->
+    <div class="sidebar-box">
+        <div class="newsletter-header">NEWSLETTER</div>
+        <p>Subscribe to our newsletter</p>
+        <input type="email" placeholder="Email Address">
+        <button>Sign Up Now</button>
+    </div>
+</div>
