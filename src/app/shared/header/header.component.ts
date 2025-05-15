@@ -71,11 +71,25 @@ export class HeaderComponent implements OnInit {
 
   submitSearch(event: Event): void {
     event.preventDefault();
-    if (this.searchQuery.trim()) {
-      this.router.navigate(['/search'], { 
-        queryParams: { q: this.searchQuery.trim() } 
-      });
-      this.toggleSearch(); // Close search overlay after submitting
+    const query = this.searchQuery.trim().toLowerCase();
+
+    const validRoutes = [
+      'home',
+      'photography',
+      'sports',
+      'travel',
+      'business',
+      'fashion',
+      'features',
+      'contact'
+    ];
+
+    if (validRoutes.includes(query)) {
+      this.router.navigate(['/' + query]);
+    } else {
+      this.router.navigate(['/search'], { queryParams: { q: this.searchQuery.trim() } });
     }
+
+    this.toggleSearch(); // Close search overlay after submitting
   }
 }
