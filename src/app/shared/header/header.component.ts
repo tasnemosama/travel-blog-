@@ -68,17 +68,32 @@ export class HeaderComponent implements OnInit {
     this.searchQuery = this.searchQuery.trim().toLowerCase();
 
     const posts = document.querySelectorAll('.post-card, .featured-post');
-    
+    const folders = document.querySelectorAll('.folder-name'); // تأكد من وجود هذا الكلاس لعناصر المجلدات
+
+    let anyVisible = false;
+
     posts.forEach((post: Element) => {
       const title = post.querySelector('.post-title')?.textContent?.toLowerCase() || '';
       const category = post.querySelector('.category-tag')?.textContent?.toLowerCase() || '';
 
-      if (title.includes(this.searchQuery) || category.includes(this.searchQuery)) {
-        (post as HTMLElement).style.display = '';
-      } else {
-        (post as HTMLElement).style.display = 'none';
-      }
+      const match = title.includes(this.searchQuery) || category.includes(this.searchQuery);
+      (post as HTMLElement).style.display = match ? '' : 'none';
+
+      if (match) anyVisible = true;
     });
+
+    folders.forEach((folder: Element) => {
+      const name = folder.textContent?.toLowerCase() || '';
+      const match = name.includes(this.searchQuery);
+      (folder as HTMLElement).style.display = match ? '' : 'none';
+
+      if (match) anyVisible = true;
+    });
+
+    const noResultMsg = document.querySelector('.no-results-message') as HTMLElement;
+    if (noResultMsg) {
+      noResultMsg.style.display = anyVisible ? 'none' : 'block';
+    }
 
     this.toggleSearch(); // أغلق نافذة البحث بعد التصفية
   }
