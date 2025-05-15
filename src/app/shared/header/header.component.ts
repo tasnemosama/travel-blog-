@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   searchQuery: string = '';
   
   constructor(private router: Router) {
+    // Check if current route is home page
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
@@ -30,6 +31,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // Initial check for home page
     this.isHomePage = this.router.url === '/' || 
                       this.router.url.startsWith('/home/list-layout') || 
                       this.router.url.startsWith('/home/grid-layout') || 
@@ -37,6 +39,7 @@ export class HeaderComponent implements OnInit {
                       this.router.url.startsWith('/home/boxed-layout');
   }
 
+  // Optional: Close dropdown when clicking outside
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent) {
     const dropdowns = document.querySelectorAll('.dropdown-menu');
@@ -50,6 +53,7 @@ export class HeaderComponent implements OnInit {
   toggleSearch(): void {
     this.isSearchActive = !this.isSearchActive;
     if (this.isSearchActive) {
+      // Focus the search input when overlay is opened
       setTimeout(() => {
         const searchInput = document.querySelector('.search-form input') as HTMLInputElement;
         if (searchInput) {
@@ -57,44 +61,35 @@ export class HeaderComponent implements OnInit {
         }
       }, 100);
     } else {
+      // Clear search query when closing
       this.searchQuery = '';
     }
-
+    
+    // Prevent scrolling when search is active
     document.body.style.overflow = this.isSearchActive ? 'hidden' : '';
   }
 
   submitSearch(event: Event): void {
     event.preventDefault();
-    this.searchQuery = this.searchQuery.trim().toLowerCase();
+    const query = this.searchQuery.trim().toLowerCase();
 
-    const posts = document.querySelectorAll('.post-card, .featured-post');
-    const folders = document.querySelectorAll('.folder-name'); // تأكد من وجود هذا الكلاس لعناصر المجلدات
+    const validRoutes = [
+      'home',
+      'photography',
+      'sports',
+      'travel',
+      'business',
+      'fashion',
+      'features',
+      'contact'
+    ];
 
-    let anyVisible = false;
-
-    posts.forEach((post: Element) => {
-      const title = post.querySelector('.post-title')?.textContent?.toLowerCase() || '';
-      const category = post.querySelector('.category-tag')?.textContent?.toLowerCase() || '';
-
-      const match = title.includes(this.searchQuery) || category.includes(this.searchQuery);
-      (post as HTMLElement).style.display = match ? '' : 'none';
-
-      if (match) anyVisible = true;
-    });
-
-    folders.forEach((folder: Element) => {
-      const name = folder.textContent?.toLowerCase() || '';
-      const match = name.includes(this.searchQuery);
-      (folder as HTMLElement).style.display = match ? '' : 'none';
-
-      if (match) anyVisible = true;
-    });
-
-    const noResultMsg = document.querySelector('.no-results-message') as HTMLElement;
-    if (noResultMsg) {
-      noResultMsg.style.display = anyVisible ? 'none' : 'block';
+    if (validRoutes.includes(query)) {
+      this.router.navigate(['/' + query]);
+    } else {
+      this.router.navigate(['/search'], { queryParams: { q: this.searchQuery.trim() } });
     }
 
-    this.toggleSearch(); // أغلق نافذة البحث بعد التصفية
+    this.toggleSearch(); // Close search overlay after submitting
   }
 }
