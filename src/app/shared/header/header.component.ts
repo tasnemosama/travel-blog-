@@ -18,7 +18,6 @@ export class HeaderComponent implements OnInit {
   searchQuery: string = '';
   
   constructor(private router: Router) {
-    // Check if current route is home page
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
@@ -31,7 +30,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Initial check for home page
     this.isHomePage = this.router.url === '/' || 
                       this.router.url.startsWith('/home/list-layout') || 
                       this.router.url.startsWith('/home/grid-layout') || 
@@ -39,7 +37,6 @@ export class HeaderComponent implements OnInit {
                       this.router.url.startsWith('/home/boxed-layout');
   }
 
-  // Optional: Close dropdown when clicking outside
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent) {
     const dropdowns = document.querySelectorAll('.dropdown-menu');
@@ -53,7 +50,6 @@ export class HeaderComponent implements OnInit {
   toggleSearch(): void {
     this.isSearchActive = !this.isSearchActive;
     if (this.isSearchActive) {
-      // Focus the search input when overlay is opened
       setTimeout(() => {
         const searchInput = document.querySelector('.search-form input') as HTMLInputElement;
         if (searchInput) {
@@ -61,35 +57,29 @@ export class HeaderComponent implements OnInit {
         }
       }, 100);
     } else {
-      // Clear search query when closing
       this.searchQuery = '';
     }
-    
-    // Prevent scrolling when search is active
+
     document.body.style.overflow = this.isSearchActive ? 'hidden' : '';
   }
 
   submitSearch(event: Event): void {
     event.preventDefault();
-    const query = this.searchQuery.trim().toLowerCase();
+    this.searchQuery = this.searchQuery.trim().toLowerCase();
 
-    const validRoutes = [
-      'home',
-      'photography',
-      'sports',
-      'travel',
-      'business',
-      'fashion',
-      'features',
-      'contact'
-    ];
+    const posts = document.querySelectorAll('.post-card, .featured-post');
+    
+    posts.forEach((post: Element) => {
+      const title = post.querySelector('.post-title')?.textContent?.toLowerCase() || '';
+      const category = post.querySelector('.category-tag')?.textContent?.toLowerCase() || '';
 
-    if (validRoutes.includes(query)) {
-      this.router.navigate(['/' + query]);
-    } else {
-      this.router.navigate(['/search'], { queryParams: { q: this.searchQuery.trim() } });
-    }
+      if (title.includes(this.searchQuery) || category.includes(this.searchQuery)) {
+        (post as HTMLElement).style.display = '';
+      } else {
+        (post as HTMLElement).style.display = 'none';
+      }
+    });
 
-    this.toggleSearch(); // Close search overlay after submitting
-  }
+    this.toggleSearch(); // أغلق نافذة البحث بعد التصفية
+  }
 }
