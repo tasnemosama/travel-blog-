@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: row; /* Sidebar will be on the right */
   gap: 20px;
+  max-width: 1300px;
   align-items: flex-start;
 }
 
@@ -75,6 +76,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-left: 20px;
+  margin-right: 100px;
 }
 
 /* About Me Section */

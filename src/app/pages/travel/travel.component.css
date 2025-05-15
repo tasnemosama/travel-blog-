@@ -3,21 +3,16 @@
 .container {
   display: flex;
   flex-direction: row;
-  /* يجعل السايدبار على اليمين */
   justify-content: space-between;
   gap: 70px;
+  max-width: 1300px;
 }
 
 .main-content {
-  width: 70%;
+  flex: 2;
 }
 
-.sidebar {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+
 
 
 .card {
@@ -51,6 +46,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-left: 20px;
+  margin-right: 100px;
 }
 
 /* About Me Section */
